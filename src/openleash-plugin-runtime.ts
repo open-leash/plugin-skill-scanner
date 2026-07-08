@@ -44,6 +44,7 @@ export type EvaluationPipelineInput = {
 };
 
 export type SkillObservationInput = {
+  event?: Extract<PipelineEvent, "skill.detected" | "skill.changed" | "skill.removed">;
   agentKind: string;
   agentName: string;
   skillName: string;
